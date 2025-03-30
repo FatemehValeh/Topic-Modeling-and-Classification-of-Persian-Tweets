@@ -7,11 +7,11 @@ For each value of K from 2 to 19, BERTopic was executed with K-Means clustering.
 
 As shown in the plot below, increasing \( K \) initially leads to a notable increase in **average cluster purity**, especially at lower values of \( K \), as clusters become better differentiated by topic. Around \( K = 13 \), the average purity stabilizes, indicating that the model has sufficiently distinguished different topics. However, increasing \( K \) to very high values—eventually approaching the total number of tweets—results in an average purity of 1, as each tweet forms its own individual cluster.  
 
-![Clustering Purity vs. K](path/to/purity_plot.png)  
+![Clustering Purity vs. K](effect%20of%20k%20on%20the%20average%20purity.png)  
 
 Additionally, increasing \( K \) improves **classification performance** in terms of **precision, recall, and F1-score**, particularly at the beginning, as tweets become more distinguishable from one another. However, similar to cluster purity, performance stabilizes around \( K = 13 \), suggesting that the classifier benefits from well-formed topic clusters but does not gain further improvements beyond this point.  
 
-![Classification Performance vs. K](path/to/classification_plot.png)  
+![Classification Performance vs. K](effect%20of%20k%20on%20classification%20results.png)  
 
 ---
 ## 2. Execute BERTopic, Label Data, and Classify  
@@ -22,7 +22,7 @@ The plot below shows the effect of \( K \) on classification performance. Unlike
 
 Since cluster names consist of separated words (e.g., *"رژیم، شاه، اسرائیل"*), two clusters might contain similar tweets but have different names due to word order or minor differences in word selection. As a result, clusters with **semantically similar content but different labels** negatively impact classification performance.  
 
-![Classification Performance using BERTopic Labels vs. K](path/to/bertopic_labels_plot.png)  
+![Classification Performance using BERTopic Labels vs. K](effect%20of%20K%20on%20classification%20performance%20using%20BERTopic%20names%20as%20labels.png)  
 
 
 ## 3. Refining BERTopic Labels Using GPT-4 for Classification  
